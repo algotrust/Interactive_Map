@@ -33,10 +33,10 @@ vars =c(
 
 featuredata <- d
 
-shinyUI(navbarPage("Interactive Map", theme = shinytheme("spacelab"),
+shinyUI(navbarPage("National Features", theme = shinytheme("spacelab"),
                    
                   
-                   tabPanel("Features within the US",
+                   tabPanel("Interactive Map",
                             div(class="outer",
                                 
                                 tags$head(
@@ -79,7 +79,7 @@ shinyUI(navbarPage("Interactive Map", theme = shinytheme("spacelab"),
                             )
                         ),
                    
-                   tabPanel("Data Table",
+                   tabPanel("Data",
                             helpText("Note: On the far right of table,",
                                      "there is an ACTION button that is currently",
                                      "Disabled."),
@@ -109,6 +109,12 @@ shinyUI(navbarPage("Interactive Map", theme = shinytheme("spacelab"),
                             
                             dataTableOutput("table1")
                    ),
+                tabPanel("About",
+                         h2("Coming Soon.")
+                         
+                
+                ),
+
 
                   conditionalPanel("false", icon("crosshair"))
                    
